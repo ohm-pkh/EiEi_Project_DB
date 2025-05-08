@@ -1,0 +1,168 @@
+    @font-face {
+      font-family: 'Roboto-semiB';
+      src: url(./font/static/Roboto-SemiBold.ttf);
+    }
+
+    @font-face {
+      font-family: 'NunitoSans';
+      src: url(./font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    }
+
+    @font-face {
+      font-family: 'Roboto-Reg';
+      src: url(./font/static/Roboto-Regular.ttf);
+    }
+
+    html,body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    body{
+      overflow: hidden;
+      display: flex;
+      gap: 10px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 80px;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }   
+
+    nav a{
+        cursor: pointer;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    nav a .nav-icon{
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        color: black;
+    }
+
+    nav a .nav-active{
+        color:#4182F9;
+    }
+
+
+    .main-container{
+        padding: 20px;
+        width: 91.7%;
+    }
+
+    .welcome{
+        font-family: 'Roboto-semiB';
+        font-size: 25px;
+        margin-left: 5%;
+        margin-bottom: 20px;
+        height: 24px;
+    }
+
+    .Profile-container{
+        margin: 0 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .top-dec{
+        width: 100%;
+        height: 20%;
+        border-top-left-radius:17px;
+        border-top-right-radius: 17px;
+        background: #79bfdb;
+        background: linear-gradient(90deg, rgba(121, 191, 219, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .Profileimg{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .Profile-header{
+        padding: 20px;
+        height: fit-content;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-fname{
+        font-family: 'Roboto-semiB';
+        font-size: 20px;
+        color: #000;
+    }
+
+    .logout{
+        font-family: 'Roboto-semiB';
+        display: flex;
+        height: 40px;
+        justify-self: end;
+        justify-content: center;
+        align-items: center;
+        background-color: #AFFFF4;
+        border: #fff 3px solid;
+        cursor: pointer;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .Logout:hover{
+        background-color: #fff;
+        border: #AFFFF4 3px solid;
+    }
+
+    .header-user-id{
+        font-family: 'Roboto-Reg';
+        font-size: 16px;
+        color: #000;
+    }
+
+    .Profile-main{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    label{
+        font-family: 'Roboto-semiB';   
+        font-size: 20px;
+        align-self: start;
+        margin-left:20px ;
+    }
+
+    .info-container{
+        height: inherit;
+        border: 2px #000 solid;
+        border-radius: 10px;
+        width: 80%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        font-size: 20px;
+        font-family: 'Roboto-Reg';
+    }
+    .info-Sep{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+

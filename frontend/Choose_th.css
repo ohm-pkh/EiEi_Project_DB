@@ -1,0 +1,185 @@
+    @font-face {
+      font-family: 'Roboto-semiB';
+      src: url(./font/static/Roboto-SemiBold.ttf);
+    }
+
+    @font-face {
+      font-family: 'NunitoSans';
+      src: url(./font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    }
+
+    @font-face {
+      font-family: 'Roboto-Reg';
+      src: url(./font/static/Roboto-Regular.ttf);
+    }
+    
+    body{
+      overflow: hidden;
+      background-color: black;
+      max-height: 100vh;
+    }
+
+    .movie-detail-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      width: 235px;
+      gap: 10px;
+      margin-left: 50px;
+    }
+
+    .poster{
+      height: 340px;
+      width: 100%;
+      background-color: aqua;
+      border-radius: 10px;
+      background-size: cover;
+    }
+
+    .detail-hearder{
+      font-family: 'Roboto-semiB';
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .detail-body{
+      font-family: 'Roboto-Reg';
+      font-size: 16px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .detail-body .text-container{
+      display: flex;
+    }
+
+    .detail-body .text-container .body-header{
+      flex: 2.2;
+    }
+
+    .detail-body .text-container .body-detail{
+      flex: 3;
+    }
+
+    .line{
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+    }
+    .main-container{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .Right-Container{
+      height: 600px;
+      width: 80%;
+    }
+
+    .movie-detail-container{
+      color: #fff;
+    }
+
+    .movie-detail-container form{
+      font-family: 'Roboto-Reg';
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .movie-detail-container input[type ='submit']{
+      border: none;
+      cursor: pointer;
+    }
+
+    .description{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      width: 100%;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .description-header{
+      font-family: 'Roboto-semiB';
+      font-size: 20px;
+    }
+
+    .description-detail{
+      font-family: 'Roboto-Reg';
+      display: flex;
+      font-size: 16px;
+      width: 80%;
+      justify-content: center;
+    }
+
+    .showtime{
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+    }
+
+    .showtime-header{
+      text-align: center;
+      font-family: 'Roboto-semiB';
+      font-size: 20px;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .showtime-list{
+      font-family: 'Roboto-Reg';
+      color: #fff;
+      margin: auto;
+      width: 80%;
+      height: 90%;
+      overflow: auto;
+    }
+
+    .showtime-list::-webkit-scrollbar{
+      display: none;
+    }
+
+    .showtime-detail{
+      margin-top: 10px;
+      display: flex;
+      font-size: 16px;
+      justify-content: space-around;
+    }
+
+    .time_button{
+      padding: 5px;
+      background-color: black;
+      border:#fff 2px solid;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .time_button:hover{
+      color: #000;
+      background-color: #fff;
+      border:black 2px solid;
+    }
+
+    .past_time_button{
+      padding: 5px;
+      background-color: black;
+      border:#737473 2px solid;
+      color: #737473;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: default;
+    }
+
+    .theater{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px #fff solid;
+    }

@@ -1,0 +1,179 @@
+    @font-face {
+      font-family: 'Roboto-semiB';
+      src: url(./font/static/Roboto-SemiBold.ttf);
+    }
+
+    @font-face {
+      font-family: 'NunitoSans';
+      src: url(./font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    }
+
+    @font-face {
+      font-family: 'Roboto-Reg';
+      src: url(./font/static/Roboto-Regular.ttf);
+    }
+
+    html,body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    body{
+      overflow: hidden;
+      display: flex;
+      gap: 10px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 80px;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }   
+
+    nav a{
+        cursor: pointer;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    nav a .nav-icon{
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        color: black;
+    }
+
+    nav a .nav-active{
+        color:#4182F9;
+    }
+
+
+    .main-container{    
+        padding: 20px;
+        width: 91.7%;
+    }
+
+    .welcome{
+        font-family: 'Roboto-semiB';
+        font-size: 25px;
+        margin-left: 5%;
+        margin-bottom: 20px;
+        height: 24px;
+    }
+    .Profile-container{
+        margin: 0 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .top-dec{
+        width: 100%;
+        height: 20%;
+        border-top-left-radius:17px;
+        border-top-right-radius: 17px;
+        background: #79bfdb;
+        background: linear-gradient(90deg, rgba(121, 191, 219, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .history-main{
+        display: flex;
+        height: 80%;
+        width: 100%;
+    }
+
+    .history-container-scoller {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    margin: auto;
+    }
+
+    .history-container-scoller::-webkit-scrollbar{
+        display: none;
+    }
+
+    .history-container:first-child {
+    margin-left: 0px;
+    }
+
+    .history-container {
+    height: calc(100%-2px);
+    width: 200px;
+    margin-left: 20px;
+    flex-shrink: 0; 
+    background-color: #E7E7E7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+
+    .movie-photo{
+        background-color: gray;
+        height: 60%;
+        width: 90%;
+        margin:10px;
+        background-size: cover;
+    }  
+
+    .title{
+        font-family: 'Roboto-semiB';
+        font-size: 20px;
+        text-align: center;
+        height: 24px;
+    }
+
+    .date_time{
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .date{
+        display: flex;
+        align-items: center;
+    }
+
+    .time{
+        display: flex;
+        align-items: center;
+    }
+
+    .seat-label{
+        color: orange;
+    }
+
+    .movie-info{
+        font-family: 'Roboto-Reg';
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 10px;
+    }
+
+    .status{
+        width: fit-content;
+        padding: 2px 20px;
+        margin: auto;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+    .confirm{
+        background-color: #59FF6F;
+    }
+
+    .pending{
+        background-color: #FFDB59;
+    }

@@ -1,0 +1,21 @@
+.Poster{
+    height: 50px;
+    width: 35px;
+    background-color: blue;
+    margin-left: 10px;
+}
+
+.edit_n_delete{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+}
+.edit_n_delete div{
+    cursor: pointer;
+}
+
+
+.delete_b{
+    color: red;
+}

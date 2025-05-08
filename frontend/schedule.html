@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule Management</title>
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <section id="sidebar">
+    <ul class="side-menu top">
+        <li><a href="dash.html"><i class='bx bx-grid-alt'></i><span class="text">Dashboard</span></a></li>
+      <li><a href="MovieManagement.html">
+        <i class='bx bxs-video'></i>
+        <span class="text">Movie Management</span>
+    </a>
+</li>
+      <li class="active"><a href="schedule.html"><i class='bx bxs-time'></i><span class="text">Schedule Management</span></a></li>
+      <li><a href="theater.html">
+        <i class='bx bxs-building-house'></i>
+        <span class="text">Theater Management</span>
+    </a>
+</li>
+<li><a href="user.html"><i class='bx bxs-user'></i><span class="text">User Management</span></a></li>
+<li><a href="payment.html"><i class='bx bxs-credit-card'></i><span class="text">Payment Management</span></a></li>
+      <li><a href="booking.html"><i class='bx bxs-book-bookmark'></i><span class="text">Booking Management</span></a></li>
+    </ul>
+    <ul class="side-menu">
+      <li><a href="#"><i class='bx bxs-cog'></i><span class="text">Settings</span></a></li>
+      <li><a href="#" class="logout"><i class='bx bxs-log-out-circle'></i><span class="text">Logout</span></a></li>
+    </ul>
+  </section>
+
+  <!-- CONTENT -->
+  <section id="content">
+    <nav>
+      <form class="search-form">
+        <div class="search-container">
+          <input type="search" id="menuSearch" placeholder="Search..." required />
+          <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+        </div>
+      </form>
+      <input type="checkbox" id="switch-mode" hidden />
+      <label for="switch-mode" class="switch-mode"></label>
+      
+    </nav>
+
+    <main>
+      <div class="head-title">
+        <div class="left">
+          <h1>Manage Schedules</h1>
+        </div>
+        <a href="#" class="btn-download" id="openAddModal">
+          <span class="text">Add Schedule</span>
+        </a>
+      </div>
+
+      <!-- MODAL -->
+      <div class="modal" id="addScheduleModal">
+        <div class="modal-content">
+        <h3 id="modalTitle">Add Schedule</h3>
+          <form id="addScheduleForm">
+            <label>Movie ID</label>
+            <input type="text" name='movie_id' id="movie_id" placeholder="1" required />
+            <label>Language</label>
+            <input type="text" name='language' id="language" placeholder="English" required />
+            <label>Date</label>
+            <input type="date" name='date' id="scheduleDate" required />
+            <label>Time</label>
+            <input type="time" name='time' id="scheduleTime" required />
+            <label>Theater ID</label>
+            <input type="text" name='theater' id="theater" placeholder="TH001" required />
+            <div class="modal-buttons">
+              <button type="button" id="cancelBtn">Cancel</button>
+              <button type="submit" class="add-btn">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- SCHEDULE TABLE -->
+      <div class="table-data">
+          <table>
+            <thead>
+              <tr>
+                <th>Schedule ID</th>
+                <th>Movie Title</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Theater</th>
+                <th>Language</th>
+                <th>   </th> 
+              </tr>
+            </thead>
+            <tbody id="scheduleTable">
+              
+            </tbody>
+          </table>
+      </div>
+    </main>
+  </section>
+  <script src="logout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="schedule.js"></script>
+</body>
+</html>

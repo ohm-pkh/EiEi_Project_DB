@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Management</title>
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="MM.css">
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+<section id="sidebar">
+    <ul class="side-menu top">
+    <li><a href="dash.html"><i class='bx bx-grid-alt'></i><span class="text">Dashboard</span></a></li>
+      <li class="active">
+        <a href="MovieManagement.html">
+          <i class='bx bxs-video'></i>
+          <span class="text">Movie Management</span>
+        </a>
+      </li>
+      <li>
+        <a href="schedule.html">
+          <i class='bx bxs-time'></i>
+          <span class="text">Schedule Management</span>
+        </a>
+      </li>
+      <li><a href="theater.html">
+        <i class='bx bxs-building-house'></i>
+        <span class="text">Theater Management</span>
+    </a>
+</li>
+        <li>
+            <a href="user.html">
+                <i class='bx bxs-user'></i>
+                <span class="text">User Management</span>
+            </a>
+        </li>
+        <li><a href="payment.html"><i class='bx bxs-credit-card'></i><span class="text">Payment Management</span></a></li>
+      <li><a href="booking.html"><i class='bx bxs-book-bookmark'></i><span class="text">Booking Management</span></a></li>
+    </ul>
+    </ul>
+  
+    <ul class="side-menu">
+      <li><a href="#"><i class='bx bxs-cog'></i><span class="text">Settings</span></a></li>
+      <li><a href="#" class="logout"><i class='bx bxs-log-out-circle'></i><span class="text">Logout</span></a></li>
+    </ul>
+  </section>
+  
+  <!-- CONTENT -->
+  <section id="content">
+
+    <!-- NAVBAR -->
+    <nav>
+      <form class="search-form">
+        <div class="search-container">
+          <input type="search" id="menuSearch" placeholder="Search..." required />
+          <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+        </div>
+      </form>
+      
+      <input type="checkbox" id="switch-mode" hidden />
+      <label for="switch-mode" class="switch-mode"></label>
+      
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <div class="head-title">
+        <div class="left">
+          <h1>Manage Movies</h1>
+          <ul class="breadcrumb"></ul>
+        </div>
+        <a href="#" class="btn-download" id="openAddModal">
+          <span class="text">Add Movie</span>
+        </a>
+      </div>
+
+      <!-- MODAL -->
+      <div class="modal" id="addMovieModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Add Movie</h3>
+          <form id="addMovieForm">
+            <div class="modal-form-body">
+              <div class="modal-left">
+
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required />
+
+                <label for="releaseDate">Release Date</label>
+                <input type="date" name='releaseDate'id="releaseDate" required/>
+
+                <label for="poster" id="poster_label">Poster</label>
+                <input type="file" name='poster'id="poster" accept="image/*" required/>
+
+                <label for="other_img" id="other_label">Other image</label>
+                <input type="file" name='other_img' id="other_img" accept="image/*" required/>
+              </div>
+
+              <div class="modal-right">
+                <label for="genre">Genre</label>
+                <input type="text" name='genre'id="genre" required/>
+
+                <label for="duration">Duration</label>
+                <input type="text" name='duration' id="duration" required/>
+
+                <label for="endedDate">Ended Date</label>
+                <input type="date" name='endedDate' id="endedDate" required/>
+
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Description" required></textarea>
+              </div>
+            </div>
+
+            <div class="modal-buttons">
+              <button type="button" id="cancelBtn">Cancel</button>
+              <button type="submit" class="add-btn" id="submitBtn">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- MOVIE TABLE -->
+      <div class="table-data">
+          <table>
+            <thead>
+              <tr>
+                <th>Poster</th>
+                <th>Movie ID</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Release Date</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>    </th>
+              </tr>
+            </thead>
+            <tbody class="mov_m_container">
+              
+              
+              <!-- Movies will be dynamically added here -->
+            </tbody>
+          </table>
+      </div>
+    </main>
+  </section>
+  <script src="logout.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+.Head{
+    display: flex;
+    justify-content: center;
+    gap:20px
+}
+
+.seat-info{
+    color: #fff;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat-info .seat-icon{
+    font-size: 30px;
+}
+
+.seat-detail{
+    font-family: 'Roboto-Reg';
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat-detail .seat-type{
+    font-size: 16px;
+}
+
+.seat-detail .seat-price{
+    font-size: 12px;
+}
+
+.screen{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.choose-info{
+    font-family: 'Roboto-semiB';
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    bottom: 0;
+    border-top: 2px #525252 solid;
+    display: flex;
+}   
+.selected-seat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+    width: 65%;
+}
+
+.Total-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: start;
+    height: 100%;
+    gap: 10px;
+    width: 30%;
+}   
+
+.Proceed-Payment{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex:1;
+}
+
+.pp-b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: #fff 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;
+}
+
+.pp-b:hover{
+    color: black;
+    background-color: #fff;
+}
+
+.text-info{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.main-container{
+    padding-bottom: 0px;
+    margin-top: -10px;
+}
+
+.Right-Container{
+    margin-top: -45px;
+}
+
+.theater-structure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+}
+
+.seat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;    
+    height: 80%;
+    color: #fff;
+}
+
+.seat-row{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 100%;
+}
+
+.row-lable{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-seat{
+    cursor: pointer;
+}
+
+.empty-seat:hover{
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+}
+
+.selected-seat-icon{
+    color: red;
+}
+
+ .StripeElement {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+#payment-form button{
+    border: none;
+    background-color: black;
+    color: #fff;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.payment-return{
+    height: 20px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#payment-message{
+    font-family: 'Roboto-semiB';
+    font-size: 16px;
+}
+
+
+
+.confirm-seat{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#confirm{
+    border: 1px black solid;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Roboto-semiB';
+    background-color: #fff;
+}
+
+#confirm:hover{
+    border: 1px black solid;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Roboto-semiB';
+    background-color: #000;
+    color: #fff;
+}
+
+.login-success-icon{
+    font-size: 100px !important;
+    color: green;
+}
+
+.OK-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.OK-button button{
+    font-family: 'Roboto-semiB';
+    border: #000 1px solid;
+    background-color: #fff;
+    height: 40px;
+    width: 100px;  
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.OK-button button:hover{
+    font-family: 'Roboto-semiB';
+    border: #000 1px solid;
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    width: 100px;  
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Management</title>
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<section id="sidebar">
+  <ul class="side-menu top">
+    <li><a href="dash.html"><i class='bx bx-grid-alt'></i><span class="text">Dashboard</span></a></li>
+    <li><a href="MovieManagement.html"><i class='bx bxs-video'></i><span class="text">Movie Management</span></a></li>
+    <li><a href="schedule.html"><i class='bx bxs-time'></i><span class="text">Schedule Management</span></a></li>
+    <li><a href="theater.html"><i class='bx bxs-building-house'></i><span class="text">Theater Management</span></a></li>
+    <li><a href="user.html"><i class='bx bxs-user'></i><span class="text">User Management</span></a></li>
+    <li><a href="payment.html"><i class='bx bxs-credit-card'></i><span class="text">Payment Management</span></a></li>
+    <li class="active"><a href="booking.html"><i class='bx bxs-book-bookmark'></i><span class="text">Booking Management</span></a></li>
+  </ul>
+  <ul class="side-menu">
+    <li><a href="#"><i class='bx bxs-cog'></i><span class="text">Settings</span></a></li>
+    <li><a href="#" class="logout"><i class='bx bxs-log-out-circle'></i><span class="text">Logout</span></a></li>
+  </ul>
+</section>
+
+<!-- CONTENT -->
+<section id="content">
+  <nav>
+    <form class="search-form">
+      <div class="search-container">
+        <input type="search" id="menuSearch" placeholder="Search..." />
+        <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+      </div>
+    </form>
+  </nav>
+
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Manage Booking</h1>
+      </div>
+      <!-- FILTER -->
+    <div style="display: flex; align-items: center; gap: 8px; justify-content: flex-start;">
+        <label for="statusFilter">Status:</label>
+        <select id="statusFilter">
+          <option value="all">All Status</option> 
+          <option value="Confirmed">Confirmed</option>
+          <option value="Pending">Pending</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </div>
+    </div>
+
+    
+      
+
+    <!-- TABLE -->
+    <div class="table-data">
+        <table id="bookingTable">
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>User ID</th>
+              <th>Showtime ID</th>
+              <th>Seat Booked</th>
+              <th>Status</th>
+              <th>Booking Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>B001</td>
+              <td>0001</td>
+              <td>S001</td>
+              <td>A7,A6</td>
+              <td>Confirmed</td>
+              <td>2025-04-24</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </main>
+</section>
+<script src="logout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="booking.js"></script>
+</body>
+</html>

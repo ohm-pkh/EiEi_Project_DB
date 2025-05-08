@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="UserProfile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="Homepage.html">
+            <span class="material-icons-outlined nav-icon">
+                home
+            </span>
+        </a>
+        <a>
+            <span class="material-icons-outlined nav-icon nav-active">
+                dashboard
+            </span>
+        </a>
+        <a href="UserHistory.html">
+            <span class="material-icons-outlined nav-icon">
+                history
+            </span>
+        </a>
+    </nav>
+
+    <div class="main-container">
+        <div class="welcome">
+            Welcome,
+        </div>
+        <div class="Profile-container">
+            <div class="top-dec">
+
+            </div>
+            <div class="Profile-header">
+                <img src="#" alt="" class="Profileimg">
+                <div class='header-detail'>
+                    <div class="header-fname">FULL NAME</div>
+                    <div class="header-user-id">USER ID : </div>
+                </div>
+                <button class="logout">LOGOUT</button>
+            </div>
+            <div class="Profile-main">
+                <div class="info-Sep">
+                    <label for="fname">First name</label>
+                    <div id="fname" class="info-container">
+                        fname
+                    </div>
+                </div>
+                <div class="info-Sep">
+                    <label for="Uname">Username</label>
+                    <div id="Uname" class="info-container">
+                        Username
+                    </div>
+                </div>
+                <div class="info-Sep">
+                    <label for="gender">Gender</label>
+                    <div id="gender" class="info-container">
+                        gender
+                    </div>
+                </div>
+                <div class="info-Sep">
+                    <label for="email">Email</label>
+                    <div id="email" class="info-container">
+                        Email
+                    </div>
+                </div>
+                <div class="info-Sep">
+                    <label for="Jdate">Join Date</label>
+                    <div id="Jdate" class="info-container">
+                        Join date
+                    </div>
+                </div>
+                 
+            </div>
+            
+        </div>
+    </div>
+    <script src="logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="UserProfile-be.js"></script>
+</body>
+</html>
