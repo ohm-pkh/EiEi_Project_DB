@@ -20,7 +20,7 @@ app.use('/img', express.static('img'));
 const JWT_SECRET = process.env.JWT_SECRET ;
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-app.use(express.json());
+
 
 
 const db = new Pool({
@@ -99,6 +99,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 
   res.status(200).end(); // Acknowledge receipt to Stripe
 });
+app.use(express.json());
 
 
 // ✅ JSON body parser AFTER webhook
@@ -482,9 +483,9 @@ app.post('/Booking_confirm', async (req, res) => {
 
     const checkQuery = `
       SELECT booking_id FROM bookings
-      WHERE seat_id = ANY($1) AND booking_status != 'cancelled'
+      WHERE seat_id = ANY($1) AND show_id = $2 AND booking_status != 'cancelled'
     `;
-    const result = await db.query(checkQuery, [seat_id]);
+    const result = await db.query(checkQuery, [seat_id,show_id]);
 
     if (result.rows.length > 0) {
       return res.status(409).json({
