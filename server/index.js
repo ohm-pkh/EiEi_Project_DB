@@ -967,7 +967,18 @@ app.put('/theater',upload.none(),async(req,res)=>{
       console.warn(`Update failed for theater ID ${id}.`);
       return res.status(400).json({ error: true, message: 'Cannot update theater with more than 26 rows' });
     }
-    console.log('data receive :\n',req.body);
+    // Generate seat values
+    await db.query('DELETE FROM seats WHERE theater_id = $1', [id]);
+    let seatValues = [];
+    for (let i = row - 1; i >= 0; i--) {
+      const row_label = String.fromCharCode(65 + i); // A, B, C...
+      for (let j = 1; j <= col; j++) {
+        const seat_label = row_label + j;
+        const seat_type = i > 1 ? 'Normal' : 'Premium';
+        seatValues.push(`('${id}', '${seat_label}', '${seat_type}')`);
+      }
+    }
+    
     const query = `
         Update theaters 
         SET tname = $1,
@@ -981,17 +992,7 @@ app.put('/theater',upload.none(),async(req,res)=>{
       return res.status(404).json({ error: true, message: 'Cannot update theater' });
     }
 
-    // Generate seat values
-    await db.query('DELETE FROM seats WHERE theater_id = $1', [id]);
-    let seatValues = [];
-    for (let i = row - 1; i >= 0; i--) {
-      const row_label = String.fromCharCode(65 + i); // A, B, C...
-      for (let j = 1; j <= col; j++) {
-        const seat_label = row_label + j;
-        const seat_type = i > 1 ? 'Normal' : 'Premium';
-        seatValues.push(`('${id}', '${seat_label}', '${seat_type}')`);
-      }
-    }
+    
 
     // Join all values and run INSERT
     const seatInsertQuery = `
