@@ -16,12 +16,17 @@ ScrollContainer.addEventListener('scroll', () => {
   const next = focusEl.nextElementSibling;
   const prev = focusEl.previousElementSibling;
 
+  const container = document.querySelector('.head-container');
   if (isHalfOutLeft && next && onchanging == 0) {
     focusEl.classList.remove('onFocus');
     next.classList.add('onFocus');
+    const bgImg = next.getAttribute('bg_img');
+    container.style.backgroundImage = `url("http://localhost:8000${bgImg}")`;
   } else if (isHalfOutRight && prev && ScrollContainer.scrollLeft + ScrollContainer.clientWidth < ScrollContainer.scrollWidth && onchanging == 0) {
     focusEl.classList.remove('onFocus');
     prev.classList.add('onFocus');
+    const bgImg = prev.getAttribute('bg_img');
+    container.style.backgroundImage = `url("http://localhost:8000${bgImg}")`;
   }
 });
 
